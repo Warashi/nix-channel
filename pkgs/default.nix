@@ -1,0 +1,3 @@
+rec {
+  imports = [ ./muscat ];
+}
