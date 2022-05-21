@@ -1,3 +1,4 @@
+{ lib, pkgs, config, ... }:
 rec {
-  imports = [ ./pkgs/muscat ];
+  imports = [ ./pkgs ];
 }
