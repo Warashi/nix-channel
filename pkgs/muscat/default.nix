@@ -12,6 +12,13 @@ buildGoModule rec {
     sha256 = "vDQzPOl0UV5ikZ/F4ZvAdLv7sp84Hx3Y/p+91skHbQw=";
   };
 
+  postInstall = ''
+    cd $out/bin
+    for link in lemonade pbcopy pbpaste xdg-open; do
+      ln -s muscat $link
+    done
+  '';
+
   meta = with lib; {
     description = "remote code development utils";
     homepage = "https://github.com/Warashi/muscat";
