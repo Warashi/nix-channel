@@ -2,14 +2,14 @@
 
 buildGoModule rec {
   pname = "muscat";
-  version = "1.0.0";
+  version = "1.1.0";
   vendorSha256 = "2zTkMzNEVs+ySkId7zklLlV/oZdFatuXrync8S++HhA=";
 
   src = fetchFromGitHub {
     owner = "Warashi";
     repo = pname;
     rev = "v${version}";
-    sha256 = "vDQzPOl0UV5ikZ/F4ZvAdLv7sp84Hx3Y/p+91skHbQw=";
+    sha256 = "bbvpfZ7mb0w9SRa9+ilelJcNi1FBDa4OI1YqQ40UjMY=";
   };
 
   postInstall = ''
