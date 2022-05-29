@@ -7,6 +7,7 @@ let
 
   self = {
     muscat = callPackage ./pkgs/muscat { };
+    zabrze = callPackage ./pkgs/zabrze { };
   };
 in
 self
