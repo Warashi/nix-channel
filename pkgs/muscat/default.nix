@@ -2,7 +2,7 @@
 
 buildGoModule rec {
   pname = "muscat";
-  version = "1.2.1";
+  version = "1.2.2";
   vendorSha256 = "2zTkMzNEVs+ySkId7zklLlV/oZdFatuXrync8S++HhA=";
 
   src = fetchFromGitHub {
