@@ -1,17 +1,16 @@
-{ lib, buildGoModule, fetchFromGitHub }:
+{ lib, buildGo118Module, fetchFromGitHub }:
 
-buildGoModule rec {
+buildGo118Module rec {
   pname = "muscat";
-  version = "1.2.4";
+  version = "1.2.5";
   vendorSha256 = "2zTkMzNEVs+ySkId7zklLlV/oZdFatuXrync8S++HhA=";
 
   src = fetchFromGitHub {
     owner = "Warashi";
     repo = pname;
     rev = "v${version}";
-    sha256 = "1g3gp20w2qdai4imq1grg3wsm20k60bfriyjdcwkxc8bfb55j7g1";
+    sha256 = "185h24lnya7r78kmdgay2jn03knk0xs35js2dsmy8k5gvq5sn5ln";
   };
-
 
   postInstall = ''
     cd $out/bin
