@@ -3,7 +3,7 @@
 buildGo118Module rec {
   pname = "muscat";
   version = "1.3.0";
-  vendorSha256 = "2zTkMzNEVs+ySkId7zklLlV/oZdFatuXrync8S++HhA=";
+  vendorSha256 = "JrDxp7NA3Qn2oYqUlzwx8DVH+iJoImvohkvshvMjOSM=";
 
   src = fetchFromGitHub {
     owner = "Warashi";
