@@ -6,6 +6,7 @@ let
   callPackage = pkgs.lib.callPackageWith (pkgs // self);
 
   self = {
+    felix = callPackage ./pkgs/felix { };
     muscat = callPackage ./pkgs/muscat { };
     zabrze = callPackage ./pkgs/zabrze { };
   };
