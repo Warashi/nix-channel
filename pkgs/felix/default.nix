@@ -1,15 +1,18 @@
-{ lib, fetchCrate, rustPlatform }:
-
+{
+  lib,
+  fetchCrate,
+  rustPlatform,
+}:
 rustPlatform.buildRustPackage rec {
   pname = "felix";
-  version = "1.1.2";
+  version = "2.0.1";
 
   src = fetchCrate {
     inherit pname version;
-    sha256 = "sha256-x8cgjs+5rnq7ydy8Aq9Jl4NUmDfJEWfVMa+NxpIWeuc=";
+    sha256 = "sha256-n5InmQqBTeAiqOBIhJg689nQjZrMlIKgvU1Jno5r72M=";
   };
 
-  cargoHash = "sha256-VDIk0xb/p1eqxFFYTFdSnkSuHLnTcVh5tGBuCUj0dnw="; 
+  cargoHash = "sha256-rY5KMp2CE+irD7OeUchRapmHHZm6kovmt5vCq7IJceo=";
   doCheck = false; # zoxide が PATH に存在しないとテストがこけるため
 
   meta = with lib; {
@@ -18,4 +21,3 @@ rustPlatform.buildRustPackage rec {
     license = licenses.mit;
   };
 }
-
