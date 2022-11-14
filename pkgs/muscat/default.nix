@@ -1,9 +1,9 @@
 {
   lib,
-  buildGo118Module,
+  buildGo119Module,
   fetchFromGitHub,
 }:
-buildGo118Module rec {
+buildGo119Module rec {
   pname = "muscat";
   version = "1.5.0";
   vendorSha256 = "0ICp5NHpKWHLUlk7Y/CqoP5x7LDJ9ExhPGdqdGrPBxA=";
