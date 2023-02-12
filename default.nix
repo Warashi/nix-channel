@@ -7,7 +7,7 @@
     felix = callPackage ./pkgs/felix {};
     muscat = callPackage ./pkgs/muscat {};
     tmux-statusline-themes = callPackage ./pkgs/tmux-statusline-themes {};
-    catppuccin = callPackage ./pkgs/tmux-catppuccin {};
+    tmux-catppuccin = callPackage ./pkgs/tmux-catppuccin {};
     zabrze = callPackage ./pkgs/zabrze {};
   };
 in
