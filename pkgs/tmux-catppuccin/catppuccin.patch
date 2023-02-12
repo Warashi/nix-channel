@@ -1,0 +1,17 @@
+--- catppuccin.tmux.orig	2023-02-13 07:47:28.759981215 +0900
++++ catppuccin.tmux	2023-02-13 07:52:06.088640857 +0900
+@@ -30,13 +30,7 @@
+   local theme
+   theme="$(get-tmux-option "@catppuccin_flavour" "mocha")"
+ 
+-  # NOTE: Pulling in the selected theme by the theme that's being set as local
+-  # variables.
+-  sed -E 's/^(.+=)/local \1/' \
+-      > "${PLUGIN_DIR}/catppuccin-selected-theme.tmuxtheme" \
+-      < "${PLUGIN_DIR}/catppuccin-${theme}.tmuxtheme"
+-
+-  source "${PLUGIN_DIR}/catppuccin-selected-theme.tmuxtheme"
++  source "${PLUGIN_DIR}/catppuccin-i${theme}.tmuxtheme"
+ 
+   # status
+   set status "on"

@@ -8,6 +8,16 @@ tmuxPlugins.mkTmuxPlugin rec {
   version = "0.0.1";
   rtpFilePath = "catppuccin.tmux";
 
+  preInstall =
+    ''
+      for theme in frappe latte macchiato mocha; do
+        sed -i -E 's/^(.+=)/local \1/' "./catppuccin-''${theme}.tmuxtheme"
+      done
+    ''
+    + "patch <<'EOF'\n"
+    + builtins.readFile ./catppuccin.patch
+    + "\nEOF";
+
   src = fetchFromGitHub {
     owner = "catppuccin";
     repo = "tmux";
