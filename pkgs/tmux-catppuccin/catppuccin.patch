@@ -1,6 +1,144 @@
---- catppuccin.tmux.orig	2023-02-13 07:47:28.759981215 +0900
-+++ catppuccin.tmux	2023-02-13 07:52:06.088640857 +0900
-@@ -30,13 +30,7 @@
+diff --git a/catppuccin-frappe.tmuxtheme b/catppuccin-frappe.tmuxtheme
+index a38a73f..2e10ee0 100644
+--- a/catppuccin-frappe.tmuxtheme
++++ b/catppuccin-frappe.tmuxtheme
+@@ -2,16 +2,16 @@
+ # WARNING: hex colors can't contain capital letters
+ 
+ # --> Catppuccin (Frappe)
+-thm_bg="#303446"
+-thm_fg="#c6d0f5"
+-thm_cyan="#99d1db"
+-thm_black="#292c3c"
+-thm_gray="#414559"
+-thm_magenta="#ca9ee6"
+-thm_pink="#f4b8e4"
+-thm_red="#e78284"
+-thm_green="#a6d189"
+-thm_yellow="#e5c890"
+-thm_blue="#8caaee"
+-thm_orange="#ef9f76"
+-thm_black4="#626880"
++local thm_bg="#303446"
++local thm_fg="#c6d0f5"
++local thm_cyan="#99d1db"
++local thm_black="#292c3c"
++local thm_gray="#414559"
++local thm_magenta="#ca9ee6"
++local thm_pink="#f4b8e4"
++local thm_red="#e78284"
++local thm_green="#a6d189"
++local thm_yellow="#e5c890"
++local thm_blue="#8caaee"
++local thm_orange="#ef9f76"
++local thm_black4="#626880"
+diff --git a/catppuccin-latte.tmuxtheme b/catppuccin-latte.tmuxtheme
+index 16f078f..cd37b01 100644
+--- a/catppuccin-latte.tmuxtheme
++++ b/catppuccin-latte.tmuxtheme
+@@ -2,16 +2,16 @@
+ # WARNING: hex colors can't contain capital letters
+ 
+ # --> Catppuccin (Latte)
+-thm_bg="#dce0e8"
+-thm_fg="#4c4f69"
+-thm_cyan="#179299"
+-thm_black="#e6e9ef"
+-thm_gray="#bcc0cc"
+-thm_magenta="#ea76cb"
+-thm_pink="#8839ef"
+-thm_red="#d20f39"
+-thm_green="#40a02b"
+-thm_yellow="#df8e1d"
+-thm_blue="#1e66f5"
+-thm_orange="#fe640b"
+-thm_black4="#acb0be"
++local thm_bg="#dce0e8"
++local thm_fg="#4c4f69"
++local thm_cyan="#179299"
++local thm_black="#e6e9ef"
++local thm_gray="#bcc0cc"
++local thm_magenta="#ea76cb"
++local thm_pink="#8839ef"
++local thm_red="#d20f39"
++local thm_green="#40a02b"
++local thm_yellow="#df8e1d"
++local thm_blue="#1e66f5"
++local thm_orange="#fe640b"
++local thm_black4="#acb0be"
+diff --git a/catppuccin-macchiato.tmuxtheme b/catppuccin-macchiato.tmuxtheme
+index c90bf76..898ea5a 100644
+--- a/catppuccin-macchiato.tmuxtheme
++++ b/catppuccin-macchiato.tmuxtheme
+@@ -2,16 +2,16 @@
+ # WARNING: hex colors can't contain capital letters
+ 
+ # --> Catppuccin (Macchiato)
+-thm_bg="#24273a"
+-thm_fg="#cad3f5"
+-thm_cyan="#91d7e3"
+-thm_black="#1e2030"
+-thm_gray="#363a4f"
+-thm_magenta="#c6a0f6"
+-thm_pink="#f5bde6"
+-thm_red="#ed8796"
+-thm_green="#a6da95"
+-thm_yellow="#eed49f"
+-thm_blue="#8aadf4"
+-thm_orange="#f5a97f"
+-thm_black4="#5b6078"
++local thm_bg="#24273a"
++local thm_fg="#cad3f5"
++local thm_cyan="#91d7e3"
++local thm_black="#1e2030"
++local thm_gray="#363a4f"
++local thm_magenta="#c6a0f6"
++local thm_pink="#f5bde6"
++local thm_red="#ed8796"
++local thm_green="#a6da95"
++local thm_yellow="#eed49f"
++local thm_blue="#8aadf4"
++local thm_orange="#f5a97f"
++local thm_black4="#5b6078"
+diff --git a/catppuccin-mocha.tmuxtheme b/catppuccin-mocha.tmuxtheme
+index 41e6369..9bd3843 100644
+--- a/catppuccin-mocha.tmuxtheme
++++ b/catppuccin-mocha.tmuxtheme
+@@ -2,16 +2,16 @@
+ # WARNING: hex colors can't contain capital letters
+ 
+ # --> Catppuccin (Mocha)
+-thm_bg="#1e1e2e"
+-thm_fg="#cdd6f4"
+-thm_cyan="#89dceb"
+-thm_black="#181825"
+-thm_gray="#313244"
+-thm_magenta="#cba6f7"
+-thm_pink="#f5c2e7"
+-thm_red="#f38ba8"
+-thm_green="#a6e3a1"
+-thm_yellow="#f9e2af"
+-thm_blue="#89b4fa"
+-thm_orange="#fab387"
+-thm_black4="#585b70"
++local thm_bg="#1e1e2e"
++local thm_fg="#cdd6f4"
++local thm_cyan="#89dceb"
++local thm_black="#181825"
++local thm_gray="#313244"
++local thm_magenta="#cba6f7"
++local thm_pink="#f5c2e7"
++local thm_red="#f38ba8"
++local thm_green="#a6e3a1"
++local thm_yellow="#f9e2af"
++local thm_blue="#89b4fa"
++local thm_orange="#fab387"
++local thm_black4="#585b70"
+diff --git a/catppuccin.tmux b/catppuccin.tmux
+index 47d06e9..0dfc7c4 100755
+--- a/catppuccin.tmux
++++ b/catppuccin.tmux
+@@ -30,13 +30,7 @@ main() {
    local theme
    theme="$(get-tmux-option "@catppuccin_flavour" "mocha")"
  
@@ -11,7 +149,7 @@
 -      < "${PLUGIN_DIR}/catppuccin-${theme}.tmuxtheme"
 -
 -  source "${PLUGIN_DIR}/catppuccin-selected-theme.tmuxtheme"
-+  source "${PLUGIN_DIR}/catppuccin-i${theme}.tmuxtheme"
++  source "${PLUGIN_DIR}/catppuccin-${theme}.tmuxtheme"
  
    # status
    set status "on"

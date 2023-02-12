@@ -4,19 +4,13 @@
   fetchFromGitHub,
 }:
 tmuxPlugins.mkTmuxPlugin rec {
-  pluginName = "catppuccin";
+  pluginName = "tmux-catppuccin";
   version = "0.0.1";
   rtpFilePath = "catppuccin.tmux";
 
-  preInstall =
-    ''
-      for theme in frappe latte macchiato mocha; do
-        sed -i -E 's/^(.+=)/local \1/' "./catppuccin-''${theme}.tmuxtheme"
-      done
-    ''
-    + "patch <<'EOF'\n"
-    + builtins.readFile ./catppuccin.patch
-    + "\nEOF";
+  patches = [
+    ./catppuccin.patch
+  ];
 
   src = fetchFromGitHub {
     owner = "catppuccin";
