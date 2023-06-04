@@ -6,8 +6,9 @@
   self = {
     felix = callPackage ./pkgs/felix {};
     muscat = callPackage ./pkgs/muscat {};
-    tmux-statusline-themes = callPackage ./pkgs/tmux-statusline-themes {};
     tmux-catppuccin = callPackage ./pkgs/tmux-catppuccin {};
+    tmux-mvr = callPackage ./pkgs/tmux-mvr {};
+    tmux-statusline-themes = callPackage ./pkgs/tmux-statusline-themes {};
     zabrze = callPackage ./pkgs/zabrze {};
   };
 in
