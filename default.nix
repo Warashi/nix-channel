@@ -5,6 +5,7 @@
 
   self = {
     felix = callPackage ./pkgs/felix {};
+    mocword = callPackage ./pkgs/mocword {};
     muscat = callPackage ./pkgs/muscat {};
     tmux-catppuccin = callPackage ./pkgs/tmux-catppuccin {};
     tmux-mvr = callPackage ./pkgs/tmux-mvr {};
