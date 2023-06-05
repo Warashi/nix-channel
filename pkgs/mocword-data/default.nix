@@ -6,12 +6,12 @@
 }:
 stdenv.mkDerivation rec {
   pname = "mocword-data";
-  version = "eng20200217";
+  version = "0.0.1";
 
   outputs = ["out"];
 
   src = fetchurl {
-    url = "https://github.com/high-moctane/mocword-data/releases/download/${version}/mocword.sqlite.gz";
+    url = "https://github.com/high-moctane/mocword-data/releases/download/eng20200217/mocword.sqlite.gz";
     sha256 = "sha256-5tyCED6A7ujn96D+D7Yc7vKKG5ZpF798P7tCk3wqEEA=";
   };
 
